@@ -2,13 +2,14 @@ package com.phegon.phegonbank.auth_users.dtos;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
+import lombok.Data;
 
+import java.util.List;
+
+@Data
+@Builder
 public class LoginResponse {
-
-    @NotBlank(message = "Email is required")
-    @Email
-    private String email;
-
-    @NotBlank(message = "Password is required")
-    private String password;
+    private String token;
+    private List<String> roles;
 }
