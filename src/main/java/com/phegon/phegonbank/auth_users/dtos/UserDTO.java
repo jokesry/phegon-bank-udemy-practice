@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.phegon.phegonbank.account.dtos.AccountDto;
 import com.phegon.phegonbank.role.entity.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -45,7 +46,7 @@ public class UserDTO {
     private List<Role> roles;
 
     @JsonManagedReference
-    private List<AccountDTO> accounts;
+    private List<AccountDto> accounts;
 
     private LocalDateTime createdAt;
 
