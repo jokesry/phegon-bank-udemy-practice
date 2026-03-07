@@ -9,6 +9,7 @@ import com.phegon.phegonbank.auth_users.entity.User;
 import com.phegon.phegonbank.enums.AccountStatus;
 import com.phegon.phegonbank.enums.AccountType;
 import com.phegon.phegonbank.enums.Currency;
+import com.phegon.phegonbank.transaction.dtos.TransactionDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +19,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Builder
@@ -43,7 +45,7 @@ public class AccountDto {
     private AccountStatus status;
 
     @JsonManagedReference
-    private List<TransactionDto> transactions;
+    private List<TransactionDTO> transactions;
 
     private LocalDateTime closedAt;
     private LocalDateTime createdAt = LocalDateTime.now();
