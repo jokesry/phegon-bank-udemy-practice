@@ -3,6 +3,7 @@ package com.phegon.phegonbank.transaction.entity;
 import com.phegon.phegonbank.account.entity.Account;
 import com.phegon.phegonbank.enums.AccountType;
 import com.phegon.phegonbank.enums.TransactionStatus;
+import com.phegon.phegonbank.enums.TransactionType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
