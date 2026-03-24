@@ -27,6 +27,8 @@ public class Notification {
 
     private String recipient;
 
+    private String body;
+
     @Enumerated(EnumType.STRING)
     private NotificationType type;
 
